@@ -84,7 +84,13 @@ app.get('/', (c) => {
             </div>
         </section>
 
-        <!-- Enrollment Form -->
+        <!-- Enrollment Form --><script>
+document.querySelector('form').addEventListener('submit', function(e) {
+    const button = this.querySelector('button[type="submit"]');
+    button.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i>Submitting...';
+    button.disabled = true;
+});
+</script>
         <section id="enrollment" class="py-16 bg-white">
             <div class="max-w-2xl mx-auto px-4">
                 <div class="text-center mb-12">
@@ -92,7 +98,7 @@ app.get('/', (c) => {
                     <p class="text-lg text-gray-600">Get instant access to our complete Polar Oceans curriculum</p>
                 </div>
                 
-                <form id="enrollmentForm" class="space-y-6">
+                <form action="https://formspree.io/f/xpzgkqal" method="POST" class="space-y-6">
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
                             <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
