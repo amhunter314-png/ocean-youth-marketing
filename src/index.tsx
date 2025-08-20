@@ -143,7 +143,77 @@ app.get('/', (c) => {
                 </div>
                 
                 <!-- Working Formspree Form -->
-                <form action="https://formspree.io/f/xpzgkqal" method="POST" class="bg-white rounded-xl p-8 shadow-lg space-y-6">
+<!-- Working Formspree Form -->
+<form action="https://formspree.io/f/xpzgkqal" method="POST" class="bg-white rounded-xl p-8 shadow-lg space-y-6">
+    <input type="hidden" name="_to" value="info@oceanyouthacademy.com">
+    <input type="hidden" name="_subject" value="New Ocean Youth Academy Enrollment Request">
+    <input type="hidden" name="_next" value="https://33930382.ocean-youth-marketing.pages.dev/">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Full Name *</label>
+            <input type="text" name="name" required 
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Email Address *</label>
+            <input type="email" name="_replyto" required 
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+    </div>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Phone Number</label>
+            <input type="tel" name="phone" 
+                   class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+        </div>
+        <div>
+            <label class="block text-sm font-medium text-gray-700 mb-2">Role *</label>
+            <select name="role" required 
+                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+                <option value="">Select your role</option>
+                <option value="teacher">Teacher</option>
+                <option value="administrator">Administrator</option>
+                <option value="curriculum_coordinator">Curriculum Coordinator</option>
+                <option value="homeschool_parent">Homeschool Parent</option>
+                <option value="other">Other</option>
+            </select>
+        </div>
+    </div>
+    
+    <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">School/Organization *</label>
+        <input type="text" name="organization" required
+               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+    </div>
+    
+    <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Package Interest</label>
+        <select name="package" 
+                class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500">
+            <option value="">Select package type</option>
+            <option value="individual">Individual Teacher ($299)</option>
+            <option value="school">School License ($899)</option>
+            <option value="district">District License ($2,999)</option>
+            <option value="not_sure">Not sure yet</option>
+        </select>
+    </div>
+    
+    <div>
+        <label class="block text-sm font-medium text-gray-700 mb-2">Message</label>
+        <textarea name="message" rows="4" 
+                  class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500"
+                  placeholder="Tell us about your needs, timeline, or any questions..."></textarea>
+    </div>
+    
+    <button type="submit" 
+            class="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-4 px-8 rounded-lg text-lg">
+        <i class="fas fa-paper-plane mr-2"></i>
+        Submit Enrollment Request
+    </button>
+</form>
                     <input type="hidden" name="_to" value="info@oceanyouthacademy.com">
                     <input type="hidden" name="_subject" value="New Ocean Youth Academy Enrollment">
                     
